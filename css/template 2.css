@@ -57,20 +57,17 @@ header {
     width: 100%;
     z-index: 23;
     left: 0px;
-    /* we use this properties beacause the background landing will full the screen*/
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     position: relative;
-    /* position relative for container for what container */
     text-align: center;
 }
 
 header .container::after {
     content: "";
-    /*content*/
     position: absolute;
     height: 1px;
     width: calc(100% - 30px);
@@ -107,7 +104,6 @@ nav ul li a {
     font-size: 17px;
     transition: .3s;
     position: relative;
-    /* to use z-index made position:relative*/
     z-index: 1;
     padding: 36px 0;
 
@@ -177,9 +173,9 @@ header nav .toggle:hover+ul li a {
     background-color: var(--main-color);
     position: relative;
 }
-@media screen {
-    
-}
+
+@media screen {}
+
 .landing .overlay {
     position: absolute;
     top: 0;
@@ -196,7 +192,6 @@ header nav .toggle:hover+ul li a {
     width: 50%;
     transform: translateY(-50%);
     display: flex;
-    /* the content div we want it in end of text div so we make text div flex justify flex end and make max-width of content div*/
     justify-content: flex-end;
     background-color: #0f738f8c;
 }
@@ -272,7 +267,6 @@ header nav .toggle:hover+ul li a {
 
     .landing .text .content {
         max-width: 100%;
-        /*if you use width 100% will not take all text div with max-width will take all text div width*/
     }
 }
 
@@ -297,14 +291,12 @@ header nav .toggle:hover+ul li a {
 }
 
 .text1 h1::before {
-    /*h1 with out . it's not a class*/
     content: " ";
     position: absolute;
     left: 50%;
     height: 2px;
     width: 200px;
     background-color: #504d50;
-    /*when you made a color for pseudo element use background-color*/
     bottom: 0px;
     transform: translatex(-50%);
 }
@@ -323,7 +315,6 @@ header nav .toggle:hover+ul li a {
 }
 
 .text1 p {
-    /* we put width for paragraph and made margin 0 (top and bottom) auto(left and right)*/
     color: #504d50a9;
     padding: 30px;
     line-height: 2;
@@ -332,7 +323,6 @@ header nav .toggle:hover+ul li a {
     max-width: 100%;
 }
 
-/* end of components */
 
 .container .serv {
     display: grid;
@@ -374,15 +364,11 @@ header nav .toggle:hover+ul li a {
     background-image: url(../images/simple-background-blue-simple-minimalism-wallpaper-preview.jpg);
     background-size: cover;
     display: flex;
-    /* we centered the divs in center by using flex and align-items:center*/
     align-items: center;
-    /*align-items makes divs in middle of design div*/
     position: relative;
-    /* we use position relative to make overlay using speudo element*/
     overflow: hidden;
 }
 
-/* overlay using pseudo element without div*/
 .design::before {
     content: "";
     position: absolute;
@@ -475,7 +461,6 @@ header nav .toggle:hover+ul li a {
     flex-basis: 25%;
     position: relative;
     overflow: hidden;
-    /* when i made caption bottom 100% it will be oustide the box div so i use overflow:hidden*/
 
 }
 
@@ -531,7 +516,6 @@ header nav .toggle:hover+ul li a {
 }
 
 .images-container .box:hover .caption {
-    /* hover here in box div,*/
     position: absolute;
     bottom: 0;
 }
@@ -564,7 +548,6 @@ header nav .toggle:hover+ul li a {
 .video {
     height: 600px;
     overflow: hidden;
-    /* to cut overflow video from vedio*/
     position: relative;
 
 }
@@ -621,9 +604,7 @@ video {
 /*start of about*/
 .about .iphone {
     text-align: center;
-    /* i centered img through his div*/
     height: 600px;
-    /* to made div height less withput effect on img height to made overflow:hidden*/
     overflow: hidden;
 }
 
@@ -684,8 +665,7 @@ video {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    /*align-items use it with flex to center the content */
-    /* when i made flex flex direction (auto) :row turn it to column*/
+
 
 }
 
@@ -720,7 +700,6 @@ video {
 .skills .container {
     display: flex;
     flex-wrap: wrap;
-    /* use flex wrap to make third div underbeanth*/
     justify-content: space-between;
     text-align: center;
 }
@@ -739,7 +718,6 @@ video {
 
     .skills .container .text4:nth-child(1) {
         order: -1;
-        /* i use order property beacause i used 4 divs disordered and i want order them*/
     }
 
     .skills .container .text4:nth-child(3) {
@@ -831,7 +809,6 @@ video {
     background-color: var(--main-color);
     position: relative;
     height: 100%;
-    /* we give the span height:100% to show the style=width:90% or any width i type*/
 }
 
 .our-skills .prog span::before {
@@ -851,7 +828,6 @@ video {
     position: absolute;
     border: solid 9px;
     border-color: black transparent transparent transparent;
-    /* border color only use this property individual to made arrow*/
     top: -15px;
     right: -8px
 }
@@ -903,7 +879,6 @@ video {
 .price .container .pricing {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* make sure you write this right*/
     gap: 30px;
 
 }
@@ -969,7 +944,6 @@ video {
 }
 
 .price .content1 ul li:not(:last-child):before {
-    /*not last child*/
     content: "";
     position: absolute;
     width: 150px;
@@ -977,19 +951,16 @@ video {
     background-color: var(--main-color);
     bottom: 0;
     left: 50%;
-    /* that's the way you centered the pseudo element*/
     transform: translateX(-50%);
 }
 
 
 .price .container .pricing .content1 a {
     display: block;
-    /* a in html not taking margin or padding without display:block*/
     padding: 10px;
     border: var(--main-color) 1px solid;
     width: fit-content;
     margin: 10px auto;
-    /* to make the div in center with margin*/
     text-transform: capitalize;
     font-size: 20px;
     text-decoration: none;
@@ -1008,7 +979,6 @@ video {
 
 .container .buy {
     display: block;
-    /* a should display:block and width:fit-content to take margin and padding*/
     text-decoration: none;
     text-transform: capitalize;
     margin: 20px auto;
@@ -1041,11 +1011,9 @@ video {
 
 .sub .container {
     position: relative;
-    /* you can show container content form overlay through position:relative*/
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* effect on spaceing in mobile media*/
 
 }
 
@@ -1068,7 +1036,6 @@ video {
 }
 
 .sub .container form ::placeholder {
-    /*there are space between form and ::placeholder, take care about it*/
     color: white;
     text-transform: uppercase;
 }
@@ -1084,14 +1051,11 @@ video {
 
 .sub .container form input[type="email"] {
     background: none;
-    /* only use background property*/
     caret-color: var(--main-color);
     border: solid 1px white;
     padding: 20px 20px 20px 40px;
     width: calc(100%-130px);
-    /* how to put type submit inside type email*/
     border-right: none;
-    /*remove borders of input type email and input type submit to make the shape real thoses inside each other*/
     width: 100%;
 }
 
@@ -1148,8 +1112,8 @@ video {
 }
 
 .contact .cont form textarea {
-    /* should define the height of textarea*/
     height: 200px;
+    resize: none;
 }
 
 .contact .cont .contact-us ::placeholder {
@@ -1170,10 +1134,8 @@ video {
     font-size: 18px;
     color: white;
     border: 1px solid var(--main-color);
-    /* you could make border none*/
     font-weight: 600;
     margin-left: auto;
-    /* by this property you could change the position from right to left*/
     margin-right: 30px;
     cursor: pointer;
 }
@@ -1192,7 +1154,6 @@ video {
 }
 
 .contact .touch :nth-child(3) {
-    /* :nth-of-type(2)*/
     margin-top: 100px;
 }
 
@@ -1251,6 +1212,7 @@ video {
     margin-bottom: 35px;
     font-weight: 600;
 }
+
 .footer .container .icons {
     border-top: solid 1px white;
     width: fit-content;
